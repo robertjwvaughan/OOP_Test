@@ -20,5 +20,11 @@ void draw()
 
 void loadData()
 {
+  Table t = loadTable("map.csv", "header");
   
+  for (int i = 0; i < t.getRowCount(); i++)
+  {
+    Star rowFetch = new Star(t.getRow(i));
+    data.add(rowFetch);
+  }//end for
 }//end loadData
