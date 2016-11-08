@@ -18,6 +18,7 @@ void setup()
   border = map(50.0f, 0, finalx + finaly, 0, width + height);
   println(border);
   loadData();
+  printStars();
 }//end setup
 
 void draw()
@@ -25,7 +26,11 @@ void draw()
   background(0);
   grid();
   drawStars();
-  printStars();
+  
+  if (check % 2 != 0)
+  {
+    line(mx, my, mouseX, mouseY);
+  }
 }//end draw
 
 /*
@@ -91,3 +96,14 @@ void printStars()
     list.printStars();
   }
 }//end printStars
+
+int check = 0;
+float mx;
+float my;
+
+void mousePressed() 
+{
+  check++;
+  mx = mouseX;
+  my = mouseY;
+}//end mousePressed()
