@@ -18,6 +18,10 @@ void draw()
   //
 }//end draw
 
+/*
+  Function to load data into a global (ew) array list
+*/
+
 void loadData()
 {
   Table t = loadTable("map.csv", "header");
@@ -27,4 +31,12 @@ void loadData()
     Star rowFetch = new Star(t.getRow(i));
     data.add(rowFetch);
   }//end for
+  
+  /*
+  for (Star gdp:data)
+  {
+    println(gdp.name);
+  }//end calcAverage
+  */
+  
 }//end loadData
