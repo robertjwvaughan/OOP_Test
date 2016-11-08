@@ -18,6 +18,12 @@ class Star
     this.z = row.getFloat("Zg");
     this.size = row.getFloat("AbsMag");
     
-    println(life + " " + name + " " + distance + " " + x + " " + y + " " + z + " " + size);
+    //printStars();
   }//end Star
+  
+  void printStars()
+  {
+    println(life + " " + name + " " + distance + " " + x + " " 
+       + y + " " + z + " " + size);
+  }
 }//end CLASS STAR
